@@ -1,14 +1,14 @@
 import { Router } from 'express';
 const router = Router();
 
-import { getUsers } from '../controllers/user.controller';
+import { getUsers, getUserById } from '../controllers/user.controller';
 
 // /api/users
 router.get('/users', getUsers);
 // router.post('/users', getUser);
 
 // /api/users/:id
-// router.get('/users/:id', getUser);
+router.get('/users/:id', getUserById);
 // router.put('/users/:id', updateUser);
 // router.delete('/users/:id', deleteteUser);
 
